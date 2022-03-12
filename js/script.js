@@ -28,7 +28,7 @@ playSlide = setInterval(play, 2000);
 const previous = () => {
 stop()
     if(index == 1){
-        index = images.length-1 ;
+        index = images.length ;
     }
     if(index >= 0){
         index--;
@@ -41,11 +41,11 @@ stop()
 
 const play = () =>{
 console.log(images[index])
-    if(index<= images.length){
-        index++;
+    if(index < images.length){
         imgElement.setAttribute('src', images[index]);
+        index++;
     }
-    if(index == images.length-1 ){
+    if(index >= images.length ){
         index = 0;
     }
 }

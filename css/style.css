@@ -5,6 +5,10 @@ body{
 h1{
     text-align: center;
 }
+.icon{
+    width:7%;
+    fill: #fff;
+}
 .slider-div{
     width: 70vw;
     height: 80vh;
