@@ -9,7 +9,13 @@
 <body>
     <main>
         <h1>Awesome Slider</h1>
-        <img id="img-slider" style="width: 800px;" src="/images/img-1.jpg" alt="">
+        <div class="slider-div" style="width: 700px;">
+            <img id="img-slider" style="width: 100%;" src="/images/img-1.jpg" alt="">
+        </div>
+
+        <button class="btn" onclick="stop()">stop</button> <br>
+        <button class="btn" onclick="next()">next</button> <br>
+        <button class="btn" onclick="previous()">prev</button><br>
     </main>
     <!-- javascript file  -->
     <script src="js/script.js"></script>

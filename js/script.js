@@ -14,10 +14,42 @@ const images = [
 let index = 0;
 const imgElement = document.getElementById('img-slider');
 
-setInterval(() =>{
-    if(index >= images.length){
+const stop = () =>{
+    console.log('pressed');
+    clearInterval(playSlide);
+}
+
+const next = () => {
+stop()
+play()
+playSlide = setInterval(play, 1000);    
+};
+
+const previous = () => {
+stop()
+    if(index == 1){
+        index = images.length-1 ;
+    }
+    if(index >= 0){
+        index--;
+        imgElement.setAttribute('src', images[index]);
+    }
+
+    playSlide = setInterval(play, 1000);
+}
+
+
+const play = () =>{
+
+    if(index<= images.length){
+        index++;
+        imgElement.setAttribute('src', images[index]);
+    }
+    if(index == images.length-1 ){
         index = 0;
     }
-    imgElement.setAttribute('src', images[index]);
-    index++;
-},1000)
+}
+
+let playSlide = setInterval(play, 1000);
+
+
