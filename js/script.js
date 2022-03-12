@@ -22,7 +22,7 @@ const stop = () =>{
 const next = () => {
 stop()
 play()
-playSlide = setInterval(play, 1000);    
+playSlide = setInterval(play, 2000);    
 };
 
 const previous = () => {
@@ -35,12 +35,12 @@ stop()
         imgElement.setAttribute('src', images[index]);
     }
 
-    playSlide = setInterval(play, 1000);
+    playSlide = setInterval(play, 2000);
 }
 
 
 const play = () =>{
-
+console.log(images[index])
     if(index<= images.length){
         index++;
         imgElement.setAttribute('src', images[index]);
@@ -50,6 +50,6 @@ const play = () =>{
     }
 }
 
-let playSlide = setInterval(play, 1000);
+let playSlide = setInterval(play, 2000);
 
 

@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awesome Slider</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <main>
         <h1>Awesome Slider</h1>
-        <div class="slider-div" style="width: 700px;">
-            <img id="img-slider" style="width: 100%;" src="/images/img-1.jpg" alt="">
+        <div class="slider-div">
+            <img id="img-slider" src="/images/img-1.jpg" alt="">
         </div>
-
-        <button class="btn" onclick="stop()">stop</button> <br>
-        <button class="btn" onclick="next()">next</button> <br>
-        <button class="btn" onclick="previous()">prev</button><br>
+        <div class="btn-div">
+            <button class="btn" onclick="previous()">prev</button><br>
+            <button class="btn" onclick="next()">next</button> <br>
+            <button class="btn" onclick="stop()">stop</button> <br>
+        </div>
+        
     </main>
     <!-- javascript file  -->
     <script src="js/script.js"></script>
